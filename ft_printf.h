@@ -19,5 +19,7 @@
 int	ft_printf(const char *str, ...);
 int	ft_printf_char(char c);
 int	ft_printf_string(char *str);
+int	ft_printf_pointer(unsigned long nb);
+int	ft_printf_hexadecimal(unsigned long nb, char c);
 
 #endif

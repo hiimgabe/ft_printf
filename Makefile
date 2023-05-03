@@ -7,7 +7,7 @@ CC = cc
 RM = rm -f
 AR = ar -rc
 
-OBJ = ft_printf.o ft_printf_char.o ft_printf_string.o
+OBJ = ft_printf.o ft_printf_char.o ft_printf_string.o ft_printf_pointer.o ft_printf_hexadecimal.o
 
 all: $(NAME)
 

@@ -19,15 +19,15 @@ int	ft_printf_hexadecimal(unsigned long nb, char c)
 
 	count = 0;
 	if (c == 'x')
-		hexa = "0123456789abcdef"
+		hexa = "0123456789abcdef";
 	if (c == 'X')
-		hexa = "0123456789ABCDEF"
+		hexa = "0123456789ABCDEF";
 	if (nb < 16)
-		count += ft_putchar_fd(hexa[nb], 1);
-	if (nb > 16)
+		count += write(1, &hexa[nb], 1);
+	if (nb >= 16)
 	{
-		count += ft_printf_hexadecimal((nb % 16), c);
 		count += ft_printf_hexadecimal((nb / 16), c);
+		count += ft_printf_hexadecimal((nb % 16), c);
 	}
 	return (count);
 }

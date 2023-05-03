@@ -14,10 +14,13 @@
 
 int	ft_printf_pointer(unsigned long nb)
 {
+	int	count;
+
+	count = 0;
 	if (!nb)
-		return (write(1, "(nil)", 1));
+		return (write(1, "(nil)", 5));
 	else
 		write(1, "0x", 2);
-	ft_printf_hexadecimal(nb, 'x');
-	return(nb)
+	count += ft_printf_hexadecimal(nb, 'x');
+	return (count + 2);
 }
