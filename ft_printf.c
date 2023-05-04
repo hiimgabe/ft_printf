@@ -27,6 +27,10 @@ int	ft_format(char c, va_list args)
 		printlen = ft_printf_pointer(va_arg(args, unsigned long));
 	else if (c == 'd' || c == 'i')
 		printlen = ft_printf_number(va_arg(args, int));
+	else if (c == 'x' || c == 'X')
+		printlen = ft_printf_hexadecimal(va_arg(args, unsigned int), c);
+	else if (c == 'u')
+		printlen = ft_printf_number(va_arg(args, unsigned int));
 	return (printlen);
 }
 
