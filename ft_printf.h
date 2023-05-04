@@ -13,13 +13,18 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include	"libft/libft.h"
+# include	<unistd.h>
+# include	<string.h>
+# include	<stdlib.h>
+# include	<stdio.h>
+# include	<ctype.h>
 # include	<stdarg.h>
 
 int	ft_printf(const char *str, ...);
 int	ft_printf_char(char c);
 int	ft_printf_string(char *str);
 int	ft_printf_pointer(unsigned long nb);
+int	ft_printf_number(long nb);
 int	ft_printf_hexadecimal(unsigned long nb, char c);
 
 #endif

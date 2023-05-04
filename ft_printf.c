@@ -25,6 +25,8 @@ int	ft_format(char c, va_list args)
 		printlen = ft_printf_string(va_arg(args, char *));
 	else if (c == 'p')
 		printlen = ft_printf_pointer(va_arg(args, unsigned long));
+	else if (c == 'd' || c == 'i')
+		printlen = ft_printf_number(va_arg(args, int));
 	return (printlen);
 }
 
